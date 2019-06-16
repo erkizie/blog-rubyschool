@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 
-  before_action :authenticate_user!, :only => [:new, :create]
+  before_action :authenticate_user!, :only => [:new, :create] #Применяем только для отмеченныйх экшнов
 
   def index
     @articles = Article.all

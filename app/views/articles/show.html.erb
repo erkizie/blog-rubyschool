@@ -4,8 +4,8 @@
 
 <% @article.comments.each do |comment| %><!-- Вывод комментариев -->
   <p>
-    <%= comment.author %> said:
-    <i><%= comment.body %></i>
+    <%= comment.body %> <br>
+    <i>Said <%= comment.author %></i>
   </p>
 <% end %>
 
