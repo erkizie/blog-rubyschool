@@ -9,4 +9,13 @@ feature 'New article creation' do
     visit new_article_path
     expect(page).to have_content 'new article'
   end
+
+  scenario 'allows user to create new article' do
+    visit new_article_path
+
+    fill_in :article_title, :with => 'Title'
+    fill_in :article_text, :with => 'Text'
+
+    click_button 'Save Article'
+  end
 end
